@@ -7,7 +7,7 @@
 
 * Ellie [`klyszcz`](https://github.com/klyszcz)
 * Germi
-* Adam
+* Adam [`towelie_cz`](https://github.com/adam-olser)
 * Laura
 * Karolina
 * Alex [`alexey`](https://gitlab.skypicker.com/alexey.tudakov)
