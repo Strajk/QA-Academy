@@ -3,6 +3,6 @@
 * Strajk
 * Lukas
 
-# Attendee
+## Attendees
 
 * Ellie
