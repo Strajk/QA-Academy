@@ -6,3 +6,4 @@
 ## Attendees
 
 * Ellie
+* Germi
