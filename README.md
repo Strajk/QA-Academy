@@ -1,6 +1,6 @@
 # Mentors
 
-* Strajk
+* Pavel 'Strajk' Doleček [`Strajk`](https://github.com/strajk/)
 * Lukas
 
 ## Participants
