@@ -2,3 +2,7 @@
 
 * Strajk
 * Lukas
+
+# Attendee
+
+* Ellie
