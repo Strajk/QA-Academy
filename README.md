@@ -10,4 +10,4 @@
 * Adam
 * Laura
 * Karolina
-* Alex
+* Alex [(alexey)](https://gitlab.skypicker.com/alexey.tudakov)
