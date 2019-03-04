@@ -3,7 +3,7 @@
 * Strajk
 * Lukas
 
-## Attendees
+## Participants
 
 * Ellie
 * Germi
