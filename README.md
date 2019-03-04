@@ -5,7 +5,7 @@
 
 ## Participants
 
-* Ellie
+* Ellie [`klyszcz`](https://github.com/klyszcz)
 * Germi
 * Adam
 * Laura
