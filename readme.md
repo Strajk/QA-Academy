@@ -8,3 +8,6 @@
 * Ellie
 * Germi
 * Adam
+* Laura
+* Karolina
+* Alex
