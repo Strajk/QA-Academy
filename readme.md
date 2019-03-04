@@ -1,3 +1,4 @@
 # Mentors
 
 * Strajk
+* Lukas
