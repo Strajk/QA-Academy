@@ -15,3 +15,4 @@
 * Laura
 * Karolina
 * Alex [`alexey`](https://gitlab.skypicker.com/alexey.tudakov)
+* Domi
