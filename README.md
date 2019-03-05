@@ -5,7 +5,7 @@
 
 ## Assistants
 
-* Patrik
+* Patrik [`patrikRozar00`](https://github.com/patrikRozar00/)
 
 ## Participants
 
