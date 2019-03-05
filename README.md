@@ -6,7 +6,7 @@
 ## Participants
 
 * Ellie [`klyszcz`](https://github.com/klyszcz)
-* Germi
+* Germi [`Germi41`](https://github.com/Germi41)
 * Adam [`towelie_cz`](https://github.com/adam-olser)
 * Laura
 * Karolina
