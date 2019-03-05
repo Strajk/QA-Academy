@@ -3,6 +3,10 @@
 * Pavel 'Strajk' Doleček [`Strajk`](https://github.com/strajk/)
 * Lukas [`lukasdonko`](https://github.com/lukasdonko)
 
+## Assistants
+
+* Patrik
+
 ## Participants
 
 * Ellie [`klyszcz`](https://github.com/klyszcz)
