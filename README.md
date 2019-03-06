@@ -13,7 +13,7 @@
 * Germi [`Germi41`](https://github.com/Germi41)
 * Adam [`towelie_cz`](https://github.com/adam-olser)
 * Laura
-* Karolina
+* Karolina [`karolinacizmarova`](https://github.com/karolinacizmarova)
 * Alex [`alexey`](https://gitlab.skypicker.com/alexey.tudakov)
 * Domi
 * Vasek
