@@ -31,6 +31,10 @@
 * Browser GitHub and ⭐️ more interesting projects
 * Watch https://www.pluralsight.com/courses/code-school-git-real
 * Play with http://git-school.github.io/visualizing-git/
+* Check history of `README.md`
+    * [git-history](https://github-history.netlify.com/Strajk/QA-Academy/blob/master/README.md)
+    * [GitHub blame](https://github.com/Strajk/QA-Academy/blame/master/README.md)
+    * Webstorm UI
 
 ---
 
