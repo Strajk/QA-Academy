@@ -12,7 +12,7 @@
 * Ellie [`klyszcz`](https://github.com/klyszcz)
 * Germi [`Germi41`](https://github.com/Germi41)
 * Adam [`towelie_cz`](https://github.com/adam-olser)
-* Laura
+* Laura [`Lauriak`](https://github.com/Lauriak)
 * Karolina [`karolinacizmarova`](https://github.com/karolinacizmarova)
 * Alex [`alexey`](https://gitlab.skypicker.com/alexey.tudakov)
 * Domi
