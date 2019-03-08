@@ -27,10 +27,17 @@
 
 ![](assets/kiwi.png)
 
+**XSS Story**
+
+Cannot be published online :troll:
+
 
 ### HTML, CSS
-  
-Playground https://codepen.io/Strajk/pen/VRpzMp
+
+* [htmlreference.io](https://htmlreference.io/)
+* [cssreference.io](https://cssreference.io/)
+
+Playground https://codepen.io/Strajk/pen/VRpzMp?editors=1100
 
 Play https://flukeout.github.io/
 
