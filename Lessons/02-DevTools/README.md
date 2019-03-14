@@ -70,20 +70,20 @@ Use DevTools to fake something and paste screenshot to our Slack channel.
 ### Examples
 <small>ℹ️ Knowing these will be enough for 99% of use cases</small>
 
-`#container` → everything with id `container`
-`.blue` → everything with class containing `blue`
-`.blue.big` → everything with class containing `blue` and `big`
-`button.primary` → `button`s with class containing `primary`
-`.sidebar button` → inside `.sidebar`, `button`s 
-`input[type=text]` → `input`s with attribute `type` of value `text`
-`input[type=text]:first` → above, but just first
-`input[type=text]:eq(0)` → same as above
-`input[required]` → `input`s with attribute `required` (of any value)
-`a[href^="https"]` → `a`s with attribute `href` starting with `https`
-`a[href*="kiwi.com"]` → `a`s with attribute `href` containing `kiwi.com`
-`img[src$=".gif"]` → `img`s with attribute `src` ending with `.gif`
-`input:not(.touched)` → `input`s except those with class containing `touched`
-`input:not([required])` → `input`s except those with attribute `required` (of any value)
+1. `#container` → everything with id `container`
+1. `.blue` → everything with class containing `blue`
+1. `.blue.big` → everything with class containing `blue` and `big`
+1. `button.primary` → `button`s with class containing `primary`
+1. `.sidebar button` → inside `.sidebar`, `button`s 
+1. `input[type=text]` → `input`s with attribute `type` of value `text`
+1. `input[type=text]:first` → above, but just first
+1. `input[type=text]:eq(0)` → same as above
+1. `input[required]` → `input`s with attribute `required` (of any value)
+1. `a[href^="https"]` → `a`s with attribute `href` starting with `https`
+1. `a[href*="kiwi.com"]` → `a`s with attribute `href` containing `kiwi.com`
+1. `img[src$=".gif"]` → `img`s with attribute `src` ending with `.gif`
+1. `input:not(.touched)` → `input`s except those with class containing `touched`
+1. `input:not([required])` → `input`s except those with attribute `required` (of any value)
 
 ### Theory
 [W3schools CSS Selectors reference](https://www.w3schools.com/cssref/css_selectors.asp)
