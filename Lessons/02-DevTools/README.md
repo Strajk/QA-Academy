@@ -48,6 +48,9 @@ Play https://flukeout.github.io/
 * Explore Google Flights, explain complexity
 * Quickly show DevTools in other browsers
 
+#### Resources
+* [Get Started With Viewing And Changing The DOM](https://developers.google.com/web/tools/chrome-devtools/dom/#appendix) by Google Developers
+
 
 ### Play
 
@@ -59,7 +62,6 @@ Play https://flukeout.github.io/
 Use DevTools to fake something and paste screenshot to our Slack channel.
 
 **Be creative**
-
 
 ---
 
