@@ -1,9 +1,9 @@
+# Git
+
 ## Prerequisites
 
-* Markdown
-  * [Markdown syntax](https://www.markdownguide.org/basic-syntax)
-  * Try https://dillinger.io
-
+None `¯\_(ツ)_/¯`
+  
 ## Workshop
 
 * Create [GitHub](http://github.com) profile

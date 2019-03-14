@@ -1,8 +1,8 @@
-# Automation
+# Automation 🤖
 
 ## Prerequisites
 
-* **Laziness** -> delegate work to computers
+* **Laziness** – delegate work to computers
 
 ## Motivation
 
@@ -10,7 +10,7 @@
 	* [Robot beats "I am not a Robot" Captcha](https://www.youtube.com/watch?v=fsF7enQY8uI)
 	* [Why Programming Is Important?](https://www.youtube.com/watch?v=Dv7gLpW91DM)
 * Necessary (to survive ☠️) – 
-  * [Black Mirror's Metalhead Is Upon Us](https://www.youtube.com/watch?v=Fvr-uYliHUg)
+  * [Black Mirror"s Metalhead Is Upon Us](https://www.youtube.com/watch?v=Fvr-uYliHUg)
 
 #### Demo
 
@@ -26,34 +26,36 @@ Using Cypress, login to Slack and write some funny message to our channel.
 
 ![](assets/cypress.png)
 
-### Cheatsheet
+## Cheatsheet
 
 #### Navigating
 * ️[**setCookie**](https://docs.cypress.io/api/commands/setcookie.html)
   * `cy.setCookie("cookie_consent", "agreed")`
 * [**visit**](https://docs.cypress.io/api/commands/visit.html)
-  * `cy.visit('https://www.kiwi.com')` - absolute
-  * `cy.visit('/account/login')` – relative, will use baseUrl from `cypress.json` config
+  * `cy.visit("https://www.kiwi.com")` - absolute
+  * `cy.visit("/account/login")` – relative, will use baseUrl from `cypress.json` config
 * [go](https://docs.cypress.io/api/commands/go.html)
+  * `cy.go("back") / cy.go("forward")`, same as `cy.go(-1) / cy.go(1)`
 * [reload](https://docs.cypress.io/api/commands/reload.html)
+  * `cy.reload()`
 
 #### Selecting
 * ️[**get**](https://docs.cypress.io/api/commands/get.html) 
-  * `cy.get('h1.title')`/`cy.get('[data-test="uniqueSelectorJustForTests"]')`
-  * `cy.get('#todos').as('todos') …then… cy.get('@todos')` 
+  * `cy.get("h1.title")` / `cy.get("[data-test='uniqueSelectorJustForTests']")`
+  * `cy.get("#todos").as("todos") …then… cy.get("@todos")` 
 * [**️contains**](https://docs.cypress.io/api/commands/contains.html)
-  * `cy.contains('Register')`
-  * `cy.get('button').contains('Submit')`
+  * `cy.contains("Register")`
+  * `cy.get("button").contains("Submit")`
 * [focused](https://docs.cypress.io/api/commands/focused.html)
   * `cy.focused()` 
 
 #### Asserting/Expecting
 * [**should**](https://docs.cypress.io/api/commands/should.html) 
-  * `cy.get(…).should('have.class', 'active')`
-  * `cy.get(…).should('have.length', 5)`
-  * `cy.get(…).should('be.disabled')`
-  * `cy.get(…).should('contain', 'Joe')`
-  * `cy.get(…).should('not.contain', 'Joe')`
+  * `cy.get(…).should("have.class", "active")`
+  * `cy.get(…).should("have.length", 5)`
+  * `cy.get(…).should("be.disabled")`
+  * `cy.get(…).should("contain", "Joe")`
+  * `cy.get(…).should("not.contain", "Joe")`
 
 ➡️ [**List of Assertions**](https://docs.cypress.io/guides/references/assertions.html#BDD-Assertions) ⬅️
 
@@ -63,17 +65,17 @@ Using Cypress, login to Slack and write some funny message to our channel.
   * `cy.get(»selector matching multiple elements«).click({ multiple: true })` – use with caution!
   * `cy.get(»selector matching element which is hidden«).click({ force: true })` – use with caution!
 * [**type**](https://docs.cypress.io/api/commands/type.html) & [clear](https://docs.cypress.io/api/commands/clear.html)
-  * `cy.get(»input«).type('Brno')`
-  * `cy.get(»input«).type('Br{downarrow}{enter}')` – e.g. testing autocomplete
-  * `cy.get(»input«).type('Slow typing', { delay: 1000 })` – use only when necessary
-  * `cy.get(»input with some text already«).clear().type('New value')`
+  * `cy.get(»input«).type("Brno")`
+  * `cy.get(»input«).type("Br{downarrow}{enter}")` – e.g. testing autocomplete
+  * `cy.get(»input«).type("Slow typing", { delay: 1000 })` – use only when necessary
+  * `cy.get(»input with some text already«).clear().type("New value")`
 * [**check**](https://docs.cypress.io/api/commands/check.html) & [**uncheck**](https://docs.cypress.io/api/commands/uncheck.html)
   * `cy.get(»terms&conditions checkbox«).check()`
 * [**select**](https://docs.cypress.io/api/commands/select.html)
-  * `cy.get(»nationality«).select('cz')`
+  * `cy.get(»nationality«).select("cz")`
 * [focus](https://docs.cypress.io/api/commands/focus.html) & [blur](https://docs.cypress.io/api/commands/blur.html)
-  * `cy.get(»input«).focus().should('have.class', 'active')`
-  * `cy.get(»input«).type('joe@gmail').blur().should('have.class', 'invalid')`
+  * `cy.get(»input«).focus().should("have.class", "active")`
+  * `cy.get(»input«).type("joe@gmail").blur().should("have.class", "invalid")`
 * [submit](https://docs.cypress.io/api/commands/submit.html)
   * `cy.get(»form«).submit()`
   * 🐨 some people prefer clicking on submit button / pressing "Enter" instead
@@ -81,13 +83,13 @@ Using Cypress, login to Slack and write some funny message to our channel.
 #### Viewport
 * [**viewport**](https://docs.cypress.io/api/commands/viewport.html)
   * `cy.viewport(1280, 1024)`
-  * `cy.viewport('macbook-15')`
-  * `cy.viewport('iphone-5', 'portrait')`
+  * `cy.viewport("macbook-15")`
+  * `cy.viewport("iphone-5", "portrait")`
 * [scrollIntoView](https://docs.cypress.io/api/commands/scrollintoview.html)
-  * `cy.get('footer').scrollIntoView()`
+  * `cy.get("footer").scrollIntoView()`
 * [scrollTo](https://docs.cypress.io/api/commands/scrollto.html)
   * `cy.scrollTo(0, 500)` – `x/right`, `y/down`
-  * `cy.get(»sidebar«).scrollTo('bottom')`
+  * `cy.get(»sidebar«).scrollTo("bottom")`
 
 #### Utils
 * [**wait**](https://docs.cypress.io/api/commands/wait.html) – milliseconds!
@@ -100,7 +102,7 @@ Using Cypress, login to Slack and write some funny message to our channel.
 
 #### Debugging 🛠
 * [**log**](https://docs.cypress.io/api/commands/log.html)
-  * `cy.log('Message for humans')`
+  * `cy.log("Message for humans")`
 * [debug](https://docs.cypress.io/api/commands/debug.html) & [pause](https://docs.cypress.io/api/commands/pause.html)
 
 #### Interaction programmatically 🤖 `TODO: Later`
@@ -125,15 +127,15 @@ Using Cypress, login to Slack and write some funny message to our channel.
 * [route](https://docs.cypress.io/api/commands/route.html)
 
 #### More selectors 🙈
-Try not to use, prefer selectors directly inside `cy.get(»selector«)`
+⚠️ Prefer selectors directly inside `cy.get(»selector«)`
 
 | 😐                                    | 🤩                                |
 | ------------------------------------- | --------------------------------- |
-| `cy.get('button').first()`            | `cy.get('button:first')`          |
-| `cy.get('button').eq(3)`              | `cy.get('button:eq(3)')`          |
-| `cy.get('button').not('.unwanted')`   | `cy.get('button:not(.unwanted)')` |
-| `cy.get('»modal«').find(»close btn«)` | `cy.get('»modal« »close btn«')`   |
-| `cy.get('tr').filter('.odd')`         | `cy.get('tr.odd')`                |
+| `cy.get("button").first()`            | `cy.get("button:first")`          |
+| `cy.get("button").eq(3)`              | `cy.get("button:eq(3)")`          |
+| `cy.get("button").not(".unwanted")`   | `cy.get("button:not(.unwanted)")` |
+| `cy.get("»modal«").find(»close btn«)` | `cy.get("»modal« »close btn«")`   |
+| `cy.get("tr").filter(".odd")`         | `cy.get("tr.odd")`                |
 
 
 * [first](https://docs.cypress.io/api/commands/first.html) & [last](https://docs.cypress.io/api/commands/last.html) & [eq](https://docs.cypress.io/api/commands/eq.html)
