@@ -1,13 +1,17 @@
-# Mentors
+# Kiwi.com QA Academy
+
+<https://github.com/Strajk/QA-Academy>
+
+### Mentors
 
 * Pavel 'Strajk' Doleček [`Strajk`](https://github.com/strajk/)
 * Lukas [`lukasdonko`](https://github.com/lukasdonko)
 
-## Assistants
+### Assistants
 
 * Patrik [`patrikRozar00`](https://github.com/patrikRozar00/)
 
-## Participants
+### Participants
 
 * Ellie [`klyszcz`](https://github.com/klyszcz)
 * Germi [`Germi41`](https://github.com/Germi41)
