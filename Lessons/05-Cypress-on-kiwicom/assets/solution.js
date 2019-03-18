@@ -1,7 +1,6 @@
 describe("Search -> Booking -> Manage my booking", () => {
   before(() => {
     cy.setCookie("cookie_consent", "agreed")
-    cy.setCookie("cookie_consent", "agreed")
     cy.visit("https://www.kiwi.com")
   })
 
