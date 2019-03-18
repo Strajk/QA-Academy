@@ -1,0 +1,21 @@
+{
+  "name": "qa-academy",
+  "description": "<https://github.com/Strajk/QA-Academy>",
+  "scripts": {
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "eslint '**/*.js' --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Strajk/qa-academy.git"
+  },
+  "author": "strajk@me.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Strajk/qa-academy/issues"
+  },
+  "homepage": "https://github.com/Strajk/qa-academy#readme",
+  "dependencies": {
+    "eslint": "^5.15.2"
+  }
+}

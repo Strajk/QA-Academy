@@ -1,0 +1,19 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "es6": true,
+    "mocha": true
+  },
+  "rules": {
+    "quotes": ["error", "double"],
+    "indent": ["error", 2],
+    "semi": ["error", "never"],
+    "space-in-parens": ["error", "never"],
+    "spaced-comment": ["error", "always"],
+    "object-curly-spacing": ["error", "always"]
+  },
+  "globals": {
+    "cy": false,
+    "Cypress": false
+  }
+}
