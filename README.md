@@ -2,6 +2,19 @@
 
 <https://github.com/Strajk/QA-Academy>
 
+| #  | Topic                                       | Format  | Prerequisites                | Assignment |
+|----|---------------------------------------------|---------|------------------------------|------------|
+| 1  | Git                                         | Lecture | git, Webstorm                | Yes        |
+| 2  | DevTools, HTML, CSS                         | Lecture | –                            | Yes        |
+| 3  | Automation intro                            | Lecture | Cypress                      | Yes        |
+| 4  | Cypress on microsite                        | Dojo    | –                            | –          |
+| 5  | Cypress on Kiwi.com, Production: bird's eye | Dojo    | –                            | Yes        |
+| 6  | Cypress on Kiwi.com, Production: detailed   | Dojo    | –                            |            |
+| 7  |                                             |         | Run Frontend locally         |            |
+| 8  |                                             |         |                              |            |
+| 9  |                                             |         |                              |            |
+| 10 |                                             |         |                              |            |
+
 ### Mentors
 
 * Pavel 'Strajk' Doleček [`Strajk`](https://github.com/strajk/)
