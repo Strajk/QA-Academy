@@ -1,4 +1,4 @@
-# Automation 🤖
+# Automation (with Cypress) 🤖
 
 ## Prerequisites
 
@@ -16,15 +16,26 @@
 
 Use GhostInspector.com to automate something fun!
 
-![](./assets/slevomat.gif)
+![](./assets/lesson-automation/slevomat.gif)
 
-## Workshop
-
-#### Goal
+## Workshop 1: Slack
 
 Using Cypress, login to Slack and write some funny message to our channel.
 
-![](assets/cypress.png)
+![](./assets/lesson-automation/cypress.png)
+
+## Workshop 2: Microsite
+
+Write Cypress tests for <https://kiwi-gifts.skypicker.com/gifts/>
+
+[filename](./assets/lesson-automation/cypress-on-microsite.js ':include :type=code')
+
+
+## Workshop 3: Kiwi.com
+
+Write Cypress tests for <https://www.kiwi.com>
+
+[filename](./assets/lesson-automation/cypress-on-kiwicom.js ':include :type=code')
 
 ## Cheatsheet
 

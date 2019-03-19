@@ -1,4 +1,4 @@
-# Kiwi.com QA Academy
+# Kiwi.com QA Academy 🎓
 
 <https://github.com/Strajk/QA-Academy>
 

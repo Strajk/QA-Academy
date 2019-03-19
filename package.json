@@ -2,6 +2,7 @@
   "name": "qa-academy",
   "description": "<https://github.com/Strajk/QA-Academy>",
   "scripts": {
+    "start": "docsify serve .",
     "lint": "eslint '**/*.js'",
     "lint:fix": "eslint '**/*.js' --fix"
   },

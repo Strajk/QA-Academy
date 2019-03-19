@@ -1,4 +1,4 @@
-# DevTools
+# DevTools ⚙
 
 ## Prerequisites
 
@@ -9,23 +9,23 @@
 
 **Edit Instagram followers**
 
-![](assets/instagram.png)  
+![](./assets/lesson-devtools/instagram.png)  
 
 **Download "protected" photo from Instagram**
 
-![](assets/instagram-download.png)
+![](./assets/lesson-devtools/instagram-download.png)
   
 **Get around Pinterest Sign-up modal**
 
-![](assets/pinterest.gif)
+![](./assets/lesson-devtools/pinterest.gif)
 
 **Inspect image titles on Facebook**
 
-![](assets/facebook.png)
+![](./assets/lesson-devtools/facebook.png)
 
 **Inspect & adjust Network requests, avoid client side validation**
 
-![](assets/kiwi.png)
+![](./assets/lesson-devtools/kiwi.png)
 
 **XSS Story**
 
@@ -90,7 +90,7 @@ Use DevTools to fake something and paste screenshot to our Slack channel.
 
 ---
 
-## CSS for rotating logo
+## CSS for rotating logo {docsify-ignore}
 
 ```
 [data-test="Logo"] {

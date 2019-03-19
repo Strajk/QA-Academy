@@ -33,6 +33,5 @@ describe("Actions", () => {
     // ===
     cy.get("[type=email]:eq(1)").type("evzen@kiwi.com")
     cy.get(".purchase-button").click()
-
   })
 })
