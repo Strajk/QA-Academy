@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>qa-academy - <https://github.com/Strajk/QA-Academy></title>
+  <title>QA Academy</title>
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="<https://github.com/Strajk/QA-Academy>">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
@@ -19,23 +18,66 @@
       opacity: .7 !important;
     }
 
+    .app-name-link::before, .app-name-link::after {
+      content: "🎓";
+      display: inline-block;
+      position: relative;
+      top: 4px;
+      animation: jump 10s ease 0s infinite normal;
+    }
+
+    .app-name-link::before {
+      margin-right: 5px;
+    }
+
+    .app-name-link::after {
+      margin-left: 10px;
+    }
+
+    /* Generated with http://angrytools.com/css/animation/ */
+    @keyframes jump {
+      0% {
+        transform: translateY(0);
+      }
+      5% {
+        transform: translateY(0);
+      }
+      7% {
+        transform: translateY(-30px);
+      }
+      9% {
+        transform: translateY(5px);
+      }
+      11% {
+        transform: translateY(-15px);
+      }
+      14% {
+        transform: translateY(2px);
+      }
+      15% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
   </style>
 
 </head>
 <body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      name: '🎓 QA Academy 🎓',
-      repo: 'https://github.com/Strajk/qa-academy',
-      loadSidebar: true,
-      subMaxLevel: 2
-    }
-  </script>
+<div id="app"></div>
+<script>
+  window.$docsify = {
+    name: 'QA Academy',
+    repo: 'https://github.com/Strajk/qa-academy',
+    loadSidebar: true,
+    subMaxLevel: 2
+  }
+</script>
 
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="https://unpkg.com/docsify-copy-code@2"></script>
-  <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<script src="https://unpkg.com/docsify-copy-code@2"></script>
+<script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
 
 
 </body>
