@@ -14,7 +14,6 @@ describe("Search -> Booking -> Manage my booking", () => {
 
     // Booking
     // ===
-
     // Passenger
     cy.get("[data-test='ReservationPassenger-FirstName'] input").type("Test")
     cy.get("[data-test='ReservationPassenger-LastName'] input").type("Test")
