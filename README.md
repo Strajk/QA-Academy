@@ -18,7 +18,7 @@
 ### Mentors
 
 * Pavel 'Strajk' Doleček [`Strajk`](https://github.com/strajk/)
-* Lukas [`lukasdonko`](https://github.com/lukasdonko)
+* Lukas Donko [`lukasdonko`](https://github.com/lukasdonko)
 
 ### Assistants
 
