@@ -14,6 +14,29 @@
 
 [](./assets/cheatsheet-cypress.md ':include')
 
+### Tips
+
+##### Project initialization
+
+[](assets/cypress/initialize.mp4 ':include :type=video width=100% controls')
+
+##### Configuration
+
+[](assets/cypress/config.mp4 ':include :type=video width=100% controls')
+
+##### Selector playground: Finding simple selectors  
+
+[](assets/cypress/selector-playground.mp4 ':include :type=video width=100% controls')
+
+##### Selector playground: Finding complex selectors with DevTools
+
+[](assets/cypress/selector-playground-with-devtools.mp4 ':include :type=video width=100% controls')
+
+##### Selector playground: Narrowing selectors
+
+[](assets/cypress/selector-playground-narrowing-selectors.mp4 ':include :type=video width=100% controls')
+
+
 ### Recipes
 
 ##### Checking dimensions
