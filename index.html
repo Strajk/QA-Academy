@@ -78,20 +78,41 @@
 
 </head>
 <body>
-<div id="app"></div>
-<script>
-  window.$docsify = {
-    name: 'QA Academy',
-    repo: 'https://github.com/Strajk/qa-academy',
-    loadSidebar: true,
-    subMaxLevel: 3
-  }
-</script>
+  <!-- Vue -->
+  <script src="//unpkg.com/vue/dist/vue.min.js"></script>
 
-<script src="//unpkg.com/docsify@4.7.1/lib/docsify.min.js"></script>
-<script src="https://unpkg.com/docsify-copy-code@2"></script>
-<script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+  <!-- Docsify -->
+  <script src="//unpkg.com/docsify@4.7.1/lib/docsify.min.js"></script>
 
+  <!-- Plugins -->
+  <script src="https://unpkg.com/docsify-copy-code@2"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/vue-disqus@3/dist/vue-disqus.js"></script>
 
+  <!-- App placeholder -->
+  <div id="app"></div>
+
+  <!-- Initialize -->
+  <script>
+    Vue.use(VueDisqus)
+    window.$docsify = {
+      name: 'QA Academy',
+      repo: 'https://github.com/Strajk/qa-academy',
+      loadSidebar: true,
+      subMaxLevel: 3
+    }
+
+    setTimeout(() => {
+      const selector = "#main"
+      document.querySelector(selector).insertAdjacentHTML(
+        "beforeend",
+        '<vue-disqus shortname="testingacademy"></vue-disqus>'
+      )
+      new Vue({
+        el: selector, // Created by Docsify
+      })
+    }, 2500)
+
+  </script>
 </body>
 </html>
