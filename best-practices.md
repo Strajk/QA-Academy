@@ -100,7 +100,7 @@ cy.get("button").click().click() // Add two items
 
 #### Always comment force usage
 
-```
+```js
 cy.get("[name='cardExpirationYear']").type('20', { force: true }) // it's weirdly covered by ...
 ```
 
