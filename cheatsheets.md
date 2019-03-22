@@ -26,7 +26,7 @@ Commonly changed configuration options:
 
 * **baseUrl**: default `null`, change to `http://localhost:8000` and use just relative URLs in `cy.visit("/en/...")`
 * **defaultCommandTimeout**: default `4000` (4s), increase to at least `10000` (10s) for Kiwi.com 🐌
-* **numTestsKeptInMemory**: default `50`, don't worry to increase to 200
+* **numTestsKeptInMemory**: default `50`, don't worry to increase to `200`
 * **watchForFileChanges**: default `true`, set to `false` to disable auto reloading on file save
 
 [](assets/cypress/config.mp4 ':include :type=video width=100% controls')
