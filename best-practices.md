@@ -63,7 +63,7 @@ cy.get("select[name='birthMonth']").select("01")
 
 ```js
 cy.get('[data-tkey="booking.global.agreement.text_new2"]').check() // 😐
-cy.get('.ReservationAgreement checkbox') // 🙏
+cy.get('.ReservationAgreement checkbox').check() // 🙏
 ```
 
 #### Use comments to clarify selectors
