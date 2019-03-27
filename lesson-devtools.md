@@ -61,10 +61,6 @@ Play <https://flukeout.github.io/>
 
 Use DevTools to fake something and paste screenshot to our Slack channel. **Be creative**
 
-## Cheatsheet
-
-[](./assets/cheatsheet-selectors.md ':include')
-
 ### Theory
 
 [W3schools CSS Selectors reference](https://www.w3schools.com/cssref/css_selectors.asp)
