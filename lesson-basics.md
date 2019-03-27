@@ -22,8 +22,7 @@
 
 [](assets/webstorm/split.mp4 ':include :type=video width=100% controls')
 
-
 ## Markdown
 
 * [Markdown syntax](https://www.markdownguide.org/basic-syntax)
-* Try out https://dillinger.io
+* Try out <https://dillinger.io>

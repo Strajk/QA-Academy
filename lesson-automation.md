@@ -7,24 +7,22 @@
 ## Motivation
 
 * Fun – you can tell computers what to do and they will do it
-	* [Robot beats "I am not a Robot" Captcha](https://www.youtube.com/watch?v=fsF7enQY8uI)
-	* [Why Programming Is Important?](https://www.youtube.com/watch?v=Dv7gLpW91DM)
-* Necessary (to survive ☠️) – 
+  * [Robot beats "I am not a Robot" Captcha](https://www.youtube.com/watch?v=fsF7enQY8uI)
+    * [Why Programming Is Important?](https://www.youtube.com/watch?v=Dv7gLpW91DM)
+* Necessary (to survive ☠️)
   * [Black Mirror"s Metalhead Is Upon Us](https://www.youtube.com/watch?v=Fvr-uYliHUg)
 
-#### Demo
+### Demo
 
 Use GhostInspector.com to automate something fun!
 
 ![](./assets/lesson-automation/slevomat.gif)
-
 
 ## Workshop 1: Slack
 
 Using Cypress, login to Slack and write some funny message to our channel.
 
 ![](./assets/lesson-automation/cypress.png)
-
 
 ## Workshop 2: Microsite
 
@@ -36,7 +34,6 @@ Write Cypress tests for <https://kiwi-gifts.skypicker.com/gifts/>
 [](./assets/lesson-automation/cypress-on-microsite.js ':include :type=code')
 </details>
 
-
 ## Workshop 3: Kiwi.com
 
 Write Cypress tests for <https://www.kiwi.com>
@@ -47,8 +44,6 @@ Write Cypress tests for <https://www.kiwi.com>
 [](./assets/lesson-automation/cypress-on-kiwicom.js ':include :type=code')
 </details>
 
-
 ## Cheatsheet
 
 [](./assets/cheatsheet-cypress.md ':include')
-
