@@ -9,4 +9,4 @@
 * [Selectors](./cheatsheets-selectors.md)
 * [Cypress: Reference](./cheatsheets-cypress-reference.md)
 * [Cypress: Recipes](./cheatsheets-cypress-recipes.md)
-* [Cypress: Best practices](./cheatsheets-best-practices.md)
+* [Cypress: Best practices](./cheatsheets-cypress-best-practices.md)
