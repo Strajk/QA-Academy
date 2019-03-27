@@ -57,6 +57,6 @@ Cypress is just JavaScript, there's infinite amount of solutions. Propose yours!
 
 ---
 
-**Solutions can be examined and run [here](https://github.com/Strajk/QA-Academy/tree/master/stories/scrollability)**
+**Solutions can be examined and run [here](https://github.com/Strajk/QA-Academy/tree/master/assets/stories/scrollability)**
 
 
