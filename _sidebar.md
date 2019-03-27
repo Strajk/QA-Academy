@@ -4,4 +4,3 @@
 * [Automation (with Cypress)](/lesson-automation.md)
 * &nbsp;
 * [Cheatsheets](/cheatsheets.md)
-* [Best practices](/best-practices.md)
