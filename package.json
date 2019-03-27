@@ -3,7 +3,7 @@
   "description": "<https://github.com/Strajk/QA-Academy>",
   "scripts": {
     "start": "docsify serve .",
-    "lint": "eslint '**/*.js'",
+    "lint": "eslint '**/*.{js,md}'",
     "lint:fix": "eslint '**/*.js' --fix"
   },
   "repository": {
@@ -16,7 +16,9 @@
     "url": "https://github.com/Strajk/qa-academy/issues"
   },
   "homepage": "https://github.com/Strajk/qa-academy#readme",
-  "dependencies": {
-    "eslint": "^5.15.2"
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-plugin-markdown": "^1.0.0"
   }
 }

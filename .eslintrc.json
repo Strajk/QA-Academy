@@ -1,5 +1,6 @@
 {
   "extends": "eslint:recommended",
+  "plugins": ["markdown"],
   "env": {
     "es6": true,
     "mocha": true
@@ -9,7 +10,8 @@
     "indent": ["error", 2],
     "semi": ["error", "never"],
     "space-in-parens": ["error", "never"],
-    "object-curly-spacing": ["error", "always"]
+    "object-curly-spacing": ["error", "always"],
+    "no-undef": "off"
   },
   "globals": {
     "cy": false,

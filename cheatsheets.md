@@ -77,8 +77,8 @@ cy.get("[class=^'LanguageCurrent']").click()
 ##### Strive for descriptive selectors
 
 ```js
-cy.get('[data-tkey="booking.global.agreement.text_new2"]').check() // 😐
-cy.get('.ReservationAgreement checkbox').check() // 🙏
+cy.get("[data-tkey='booking.global.agreement.text_new2']").check() // 😐
+cy.get(".ReservationAgreement checkbox").check() // 🙏
 ```
 ##### Comment unclear selectors
 
@@ -156,10 +156,10 @@ cy.get("select[name='birthMonth']").select("01")
 Few `**it**`s
 ```js
 it("title", () => {
- cy.veryClearCommand()
- veryClearFunction()
- cy.log("comment what next command does")
- notSoDescriptiveFunction()
+  cy.veryClearCommand()
+  veryClearFunction()
+  cy.log("comment what next command does")
+  notSoDescriptiveFunction()
 })
 ```
 
@@ -272,7 +272,7 @@ Cypress.on(
 ##### Comment force usage
 
 ```js
-cy.get("[name='cardExpirationYear']").type('20', { force: true }) // it's weirdly covered by ...
+cy.get("[name='cardExpirationYear']").type("20", { force: true }) // it's weirdly covered by ...
 ```
 ##### Prefer plain functions over Cypress commands
 
@@ -373,8 +373,8 @@ it("some check", () => {
 
 ### Tips
 #### Project initialization
-
 [](assets/cypress/initialize.mp4 ':include :type=video width=100% controls')
+
 #### Configuration
 
 Commonly changed configuration options:
