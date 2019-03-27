@@ -153,7 +153,7 @@ cy.get("select[name='birthMonth']").select("01")
 
 ##### Consider lot of `it`s vs fewer `it`s
 
-Few `**it**`s
+Few `it`s
 
 ```js
 it("title", () => {
@@ -164,7 +164,7 @@ it("title", () => {
 })
 ```
 
-**Lot of `**it**`s**
+**Lot of `it`s**
 
 ```js
 describe("title", () => {
