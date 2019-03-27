@@ -44,6 +44,12 @@ Write Cypress tests for <https://www.kiwi.com>
 [](./assets/lesson-automation/cypress-on-kiwicom.js ':include :type=code')
 </details>
 
-## Cheatsheet
+## Useful links
 
-[](./assets/cheatsheet-cypress.md ':include')
+* <https://www.cypress.io>
+* <https://docs.cypress.io>
+* <https://docs.cypress.io/api/api/table-of-contents.html>
+* <https://github.com/cypress-io>
+* <https://github.com/cypress-io/cypress/issues>
+
+

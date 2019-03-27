@@ -1,6 +1,6 @@
-### Commands
+# Cheatsheets: Cypress Reference
 
-#### Navigating
+### Navigating
 * ️[**setCookie**](https://docs.cypress.io/api/commands/setcookie.html)
   * `cy.setCookie("cookie_consent", "agreed")`
 * [**visit**](https://docs.cypress.io/api/commands/visit.html)
@@ -11,7 +11,7 @@
 * [reload](https://docs.cypress.io/api/commands/reload.html)
   * `cy.reload()`
 
-#### Selecting
+### Selecting
 * ️[**get**](https://docs.cypress.io/api/commands/get.html) 
   * `cy.get("h1.title")` / `cy.get("[data-test='uniqueSelectorJustForTests']")`
   * `cy.get("#todos").as("todos") …then… cy.get("@todos")` 
@@ -21,7 +21,7 @@
 * [focused](https://docs.cypress.io/api/commands/focused.html)
   * `cy.focused()` 
 
-#### Asserting/Expecting
+### Asserting/Expecting
 * [**should**](https://docs.cypress.io/api/commands/should.html) 
   * `cy.get(…).should("have.class", "active")`
   * `cy.get(…).should("have.length", 5)`
@@ -31,7 +31,7 @@
 
 ➡️ [**List of Assertions**](https://docs.cypress.io/guides/references/assertions.html#BDD-Assertions) ⬅️
 
-#### Interaction
+### Interaction
 * [**click**](https://docs.cypress.io/api/commands/click.html) & [dblclick](https://docs.cypress.io/api/commands/dblclick.html)
   * `cy.get(»selector«).click()`
   * `cy.get(»selector matching multiple elements«).click({ multiple: true })` – use with caution!
@@ -52,7 +52,7 @@
   * `cy.get(»form«).submit()`
   * 🐨 some people prefer clicking on submit button / pressing "Enter" instead
 
-#### Viewport
+### Viewport
 * [**viewport**](https://docs.cypress.io/api/commands/viewport.html)
   * `cy.viewport(1280, 1024)`
   * `cy.viewport("macbook-15")`
@@ -63,7 +63,7 @@
   * `cy.scrollTo(0, 500)` – `x/right`, `y/down`
   * `cy.get(»sidebar«).scrollTo("bottom")`
 
-#### Utils
+### Utils
 * [**wait**](https://docs.cypress.io/api/commands/wait.html) – milliseconds!
   * `cy.wait(5000)` – use only when necessarily
 * [screenshot](https://docs.cypress.io/api/commands/screenshot.html)
@@ -72,25 +72,25 @@
 
 
 
-#### Debugging 🛠
+### Debugging 🛠
 * [**log**](https://docs.cypress.io/api/commands/log.html)
   * `cy.log("Message for humans")`
 * [debug](https://docs.cypress.io/api/commands/debug.html) & [pause](https://docs.cypress.io/api/commands/pause.html)
 
-#### Interaction programmatically 🤖 `TODO: Later`
+### Interaction programmatically 🤖 `TODO: Later`
 * [invoke](https://docs.cypress.io/api/commands/invoke.html) - function
 * [its](https://docs.cypress.io/api/commands/its.html) - property
 * [then](https://docs.cypress.io/api/commands/then.html)
 * [trigger](https://docs.cypress.io/api/commands/trigger.html)
 * [each](https://docs.cypress.io/api/commands/each.html)
 
-#### Environment 🤖 `TODO: Later`
+### Environment 🤖 `TODO: Later`
 * [location](https://docs.cypress.io/api/commands/location.html)
 * [hash](https://docs.cypress.io/api/commands/hash.html)
 * [title](https://docs.cypress.io/api/commands/title.html)
 * [url](https://docs.cypress.io/api/commands/url.html)
 
-#### Mocking 🌍 `TODO: Later`
+### Mocking 🌍 `TODO: Later`
 * [fixture](https://docs.cypress.io/api/commands/fixture.html)
 * [server](https://docs.cypress.io/api/commands/server.html)
 * [spy](https://docs.cypress.io/api/commands/spy.html)
@@ -98,7 +98,7 @@
 * [request](https://docs.cypress.io/api/commands/request.html)
 * [route](https://docs.cypress.io/api/commands/route.html)
 
-#### More selectors 🙈
+### More selectors 🙈
 
 <details>
 <summary>⚠️ Prefer selectors directly inside <code>cy.get(»selector«)</code></summary>
@@ -125,6 +125,3 @@
 * [prev](https://docs.cypress.io/api/commands/prev.html)/[prevAll](https://docs.cypress.io/api/commands/prevall.html)/[prevUntil](https://docs.cypress.io/api/commands/prevuntil.html) & [next](https://docs.cypress.io/api/commands/next.html)/[nextAll](https://docs.cypress.io/api/commands/nextall.html)/[nextUntil](https://docs.cypress.io/api/commands/nextuntil.html)
 
 </details>
-
-
-

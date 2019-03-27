@@ -1,3 +1,5 @@
+# Cheatsheet: Selectors
+
 <small>ℹ️ Knowing these will be enough for 99% of use cases</small>
 
 1. `#container` → everything with (attribute) id `container`

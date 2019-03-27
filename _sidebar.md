@@ -5,4 +5,8 @@
 * [DevTools, HTML, CSS](./lesson-devtools.md)
 * [Automation (with Cypress)](./lesson-automation.md)
 * &nbsp;
-* [Cheatsheets](./cheatsheets.md)
+* **Cheatsheets**
+* [Selectors](./cheatsheets-selectors.md)
+* [Cypress: Reference](./cheatsheets-cypress-reference.md)
+* [Cypress: Recipes](./cheatsheets-cypress-recipes.md)
+* [Cypress: Best practices](./cheatsheets-best-practices.md)
