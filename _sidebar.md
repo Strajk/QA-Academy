@@ -10,3 +10,6 @@
 * [Cypress: Reference](./cheatsheets-cypress-reference.md)
 * [Cypress: Recipes](./cheatsheets-cypress-recipes.md)
 * [Cypress: Best practices](./cheatsheets-cypress-best-practices.md)
+
+* **Stories**
+* [Checking element scroll-ability](./stories-scrolability.md)
