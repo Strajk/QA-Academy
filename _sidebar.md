@@ -12,4 +12,4 @@
 * [Cypress: Best practices](./cheatsheets-cypress-best-practices.md)
 * &nbsp;
 * **Stories**
-* [Checking element scroll-ability](./stories-scrolability.md)
+* [Checking element scroll-ability](./stories-scrollability.md)
