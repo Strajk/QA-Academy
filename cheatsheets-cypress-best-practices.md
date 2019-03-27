@@ -60,7 +60,7 @@ cy.get("element load").click()
 cy.get("[class='LanguageCurrent__Container-sc-1qu37au-0 ewtsmp']").click()
 
 // Better
-cy.get("[class=^'LanguageCurrent']").click()
+cy.get("[class^='LanguageCurrent']").click()
 ```
 
 ##### Strive for descriptive selectors
