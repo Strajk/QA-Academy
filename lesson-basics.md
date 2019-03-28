@@ -8,19 +8,18 @@
 
 #### Color schemes: Quickly change with Actions menu (useful when presenting on projector)
 
-[](assets/webstorm/color-scheme.mp4 ':include :type=video width=100% controls')
+<video src="/./assets/webstorm/color-scheme.mp4" width="100%" controls="controls"></video>
 
 #### Syntax inspection
 
-[](assets/webstorm/errors.mp4 ':include :type=video width=100% controls')
+<video src="/./assets/webstorm/errors.mp4" width="100%" controls="controls"></video>
 
 #### Folding
 
-[](assets/webstorm/folding.mp4 ':include :type=video width=100% controls')
+<video src="/./assets/webstorm/folding.mp4" width="100%" controls="controls"></video>
 
 #### Split window
-
-[](assets/webstorm/split.mp4 ':include :type=video width=100% controls')
+<video src="/./assets/webstorm/split.mp4" width="100%" controls="controls"></video>
 
 ## Markdown
 

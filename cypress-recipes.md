@@ -2,7 +2,7 @@
 
 ### Project initialization
 
-[](assets/cypress/initialize.mp4 ':include :type=video width=100% controls')
+<video src="/./assets/cypress/initialize.mp4" width="100%" controls="controls"></video>
 
 ### Configuration
 
@@ -13,19 +13,19 @@ Commonly changed configuration options:
 * **numTestsKeptInMemory**: default `50`, don't worry to increase to `200`
 * **watchForFileChanges**: default `true`, set to `false` to disable auto reloading on file save
 
-[](assets/cypress/config.mp4 ':include :type=video width=100% controls')
+<video src="/./assets/cypress/config.mp4" width="100%" controls="controls"></video>
 
 ### Selector playground: Finding simple selectors  
 
-[](assets/cypress/selector-playground.mp4 ':include :type=video width=100% controls')
+<video src="/./assets/cypress/selector-playground.mp4" width="100%" controls="controls"></video>
 
 ### Selector playground: Finding complex selectors with DevTools
 
-[](assets/cypress/selector-playground-with-devtools.mp4 ':include :type=video width=100% controls')
+<video src="/./assets/cypress/selector-playground-with-devtools.mp4" width="100%" controls="controls"></video>
 
 ### Selector playground: Narrowing selectors
 
-[](assets/cypress/selector-playground-narrowing-selectors.mp4 ':include :type=video width=100% controls')
+<video src="/./assets/cypress/selector-playground-narrowing-selectors.mp4" width="100%" controls="controls"></video>
 
 ### Pause and enter debugging on every failed test (requires open DevTools)
 

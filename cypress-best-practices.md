@@ -53,16 +53,68 @@ cy.get("element load").click()
 * **TODO**: Styled components, `Foo__StyledFoo_xyz`
 * **TODO**: Selecting dynamic classes (invalid, touched, ...)
 
-#### Don't rely on generated attributes
- 
+#### Don't rely on generated classes
+
+<details> 
+
+<summary>What are these weird "sc-bdVaJa cXeDc" classes?</summary>
+
+Nowadays, it's common to generate CSS instead of manually writing it.
+
+One of the most popular examples of this technique is [Styled components](styled-components.com) (Used at Kiwi.com)
+
+###### Developer writes
+
+```text
+const Box = styled.div`
+  background: salmon;
+  height: 100px
+`
+<Box />
+```
+
+###### Styled components output
+
+```text
+<div class="sc-bdVaJa cXeDcp"></div>
+.cXeDcp {
+  height: 100px;
+  background: salmon;
+}
+```
+
+This approach has many advantages (mostly out of scope for this explanation),
+but comes at a *cost of mangled class names* obstructing selecting them in automation tools, like Cypress.
+
+Fortunately, Styled components allows [setting](https://www.styled-components.com/docs/tooling#babel-plugin) of "nicer classes for debugging" and Kiwi.com's Orbit components are using it.
+
+###### Nicer output, Orbit example
+
+```text
+<button class="Button__StyledButton-sc-1brqp3f-1 jPZlME">
+```
+
+This generated class as a whole will still change often (even every release), and therefore cannot be used as selector.
+
+But the beginning of the class `Button_` will **stay the same and can be used.**
+
+</details>
 
 ```js
 // Bad
-cy.get("[class='LanguageCurrent__Container-sc-1qu37au-0 ewtsmp']").click()
+cy.get("[class='PaymentButton__Container-sc-1qu37au-0 ewtsmp']").click()
 
-// Better
-cy.get("[class^='LanguageCurrent']").click()
+// Good
+cy.get("[class^='PaymentButton_']").click() // ^= means "starts with"
 ```
+
+Beware that it's not possible to use "starts with" operator `^=` with shorter dot syntax `.` for selecting classes.
+
+```js
+// This will not work!!!
+cy.get(".^PaymentButton_']").click()
+```
+
 
 #### Strive for descriptive selectors
 

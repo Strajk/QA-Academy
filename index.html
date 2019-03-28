@@ -86,6 +86,21 @@
       margin-top: 0 !important;
     }
 
+    details {
+      background: hsl(198, 57%, 95%);
+      padding: 0.3rem 0.5rem;
+      border-left: 0.2rem solid hsl(198, 60%, 65%);
+      border-radius: 0.2rem;
+    }
+
+    details[open] {
+      box-shadow: hsla(0, 0%, 8%, 0.25) 0.1rem 0.1rem 1rem;
+    }
+
+    details summary {
+      font-weight: bold;
+    }
+
     /* Generated with http://angrytools.com/css/animation/ */
     @keyframes jump {
       0% {
@@ -123,7 +138,7 @@
   <script src="//unpkg.com/@babel/polyfill@latest/dist/polyfill.min.js"></script>
 
   <!-- Docsify -->
-  <script src="//unpkg.com/docsify@4.7.1/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify@4.9.1/lib/docsify.min.js"></script>
 
   <!-- Plugins -->
   <script src="https://unpkg.com/docsify-copy-code@2"></script>
