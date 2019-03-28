@@ -6,10 +6,10 @@
 * [Automation (with Cypress)](./lesson-automation.md)
 * &nbsp;
 * **Cheatsheets**
-* [Selectors](./cheatsheets-selectors.md)
-* [Cypress: Reference](./cheatsheets-cypress-reference.md)
-* [Cypress: Recipes](./cheatsheets-cypress-recipes.md)
-* [Cypress: Best practices](./cheatsheets-cypress-best-practices.md)
+* [Selectors](./selectors.md)
+* [Cypress: Reference](./cypress-reference.md)
+* [Cypress: Recipes](./cypress-recipes.md)
+* [Cypress: Best practices](./cypress-best-practices.md)
 * &nbsp;
 * **Stories**
 * [Checking element scroll-ability](./stories-scrollability.md)
