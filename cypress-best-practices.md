@@ -1,21 +1,21 @@
 # Cheatsheets: Cypress Best practices & Common Code reviews
 
-#### General
+## General
 
 Ask yourself: Will I understand this after a month?
 
-#### Cookies
+## Cookies
 
-##### Cookies: Set them before `visit`
+#### Cookies: Set them before `visit`
 
 ```js
 cy.setCookie("cookie_consent", "agreed")
 cy.visit("…")
 ```
 
-#### Waiting
+## Waiting
 
-##### Prefer `.get` with longer timeout over `.wait`
+#### Prefer `.get` with longer timeout over `.wait`
 
 ```js
 cy.visit("»some slow page«")
@@ -32,7 +32,7 @@ cy.get("…", { timeout: 14 * 1000 }).click()
 cy.get("…").click()
 ```
 
-##### Avoid chaining `.wait` as it could be confusing
+#### Avoid chaining `.wait` as it could be confusing
 
 ```js
 // Bad
@@ -48,12 +48,14 @@ cy.wait(10000)
 cy.get("element load").click()
 ```
 
-#### Selecting & targeting
+## Selecting & targeting
 
 * **TODO**: Styled components, `Foo__StyledFoo_xyz`
 * **TODO**: Selecting dynamic classes (invalid, touched, ...)
 
-##### Don't use full generated classes
+#### Don't rely on generated attributes
+
+Nowadays, lot of websites uses 
 
 ```js
 // Bad
@@ -63,14 +65,14 @@ cy.get("[class='LanguageCurrent__Container-sc-1qu37au-0 ewtsmp']").click()
 cy.get("[class^='LanguageCurrent']").click()
 ```
 
-##### Strive for descriptive selectors
+#### Strive for descriptive selectors
 
 ```js
 cy.get("[data-tkey='booking.global.agreement.text_new2']").check() // 😐
 cy.get(".ReservationAgreement checkbox").check() // 🙏
 ```
 
-##### Explain unclear selectors
+#### Explain unclear selectors
 
 ```js
 // Suboptimal
@@ -80,7 +82,7 @@ cy.get(".InsuranceOption:last").click()
 cy.get(".InsuranceOption:last").click() // Select "Premium insurance"
 ```
 
-##### Classes are fine as selectors when you use verbose naming methodology (like BEM)
+#### Classes are fine as selectors when you use verbose naming methodology (like BEM)
 
 ```js
 cy.get(".BookingPassengerEditSummaryInfo .BookingPassengerEditSummaryInfo-wrap-single._original")
@@ -101,7 +103,7 @@ cy.get(".BookingPassengerEditSummaryInfo-wrap-single._original")
 .Hotels-Ad-Title-Actions {}
 ```
 
-##### Avoid unnecessary `find`s
+#### Avoid unnecessary `find`s
 
 ```js
 cy
@@ -114,7 +116,7 @@ cy
   .click()
 ```
 
-##### Avoid implementation details in selectors
+#### Avoid implementation details in selectors
 
 ```js
 cy.get("[src='/images/flags/spFlag-cz.png']")
@@ -122,7 +124,7 @@ cy.get("[src='/images/flags/spFlag-cz.png']")
 cy.get("[src$='cz.png']")
 ```
 
-##### Keep selectors consistent
+#### Keep selectors consistent
 
 ###### Given
 ```html
@@ -145,7 +147,7 @@ cy.get("[data-test='payment-cc-number-input']").type("...")
 
 All are valid and acceptable selectors, but for clarify, choose one and stick to it.
 
-##### Prefer using values over text content for translation independent tests
+#### Prefer using values over text content for translation independent tests
 
 ```html
 <select name="gender">
@@ -170,9 +172,9 @@ cy.get("select[name='gender']").select("mr")
 cy.get("select[name='birthMonth']").select("01")
 ```
 
-#### Structuring
+## Structuring
 
-##### Consider lot of `it`s vs fewer `it`s
+#### Consider lot of `it`s vs fewer `it`s
 
 Few `it`s
 
@@ -203,11 +205,11 @@ describe("title", () => {
 })
 ```
 
-##### Strive for both extensiveness and brevity
+#### Strive for both extensiveness and brevity
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_7F57A7A8D35FC5303BAC42EE7925F708AE045380DF4F28A8656DA8AF91080EA4_1539180263216_image.png)
 
-##### Be consistent when possible
+#### Be consistent when possible
 
 ```js
 // Suboptimal
@@ -219,12 +221,12 @@ cy.get("[name='contact.email']").type("test@example.com")
 cy.get("[name='contact.phone']").type("123456789")
 ```
 
-##### Use hierarchical structure for tests
+#### Use hierarchical structure for tests
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_7F57A7A8D35FC5303BAC42EE7925F708AE045380DF4F28A8656DA8AF91080EA4_1539243462974_image.png)
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_7F57A7A8D35FC5303BAC42EE7925F708AE045380DF4F28A8656DA8AF91080EA4_1539244176381_image.png)
 
-##### Open/load/visit the page in `before` hook, so it’s possible to add `.only` to `it`s
+#### Open/load/visit the page in `before` hook, so it’s possible to add `.only` to `it`s
 
 ```js
 // BAD
@@ -248,7 +250,7 @@ describe("Payment", () => {
 })
 ```
 
-##### Prefer skipping to commenting
+#### Prefer skipping to commenting
 
 Commented code is not treated as code in editors and it will not be considered in linting / refactorings / searching for usages.
 
@@ -268,9 +270,9 @@ it("Something", () => {
 */
 ```
 
-#### Clarity
+## Clarity
 
-##### Explain non-obvious
+#### Explain non-obvious
 
 ```js
 // Suboptimal
@@ -292,7 +294,7 @@ cy.get("button").click().click()
 cy.get("button").click().click() // Add two items
 ```
 
-##### Explain non-standard
+#### Explain non-standard
 
 ```js
 // TODO: Explain
@@ -302,13 +304,13 @@ Cypress.on(
 )
 ```
 
-##### Explain force usage
+#### Explain force usage
 
 ```js
 cy.get("[name='cardExpirationYear']").type("20", { force: true }) // it's weirdly covered by ...
 ```
 
-##### Explain skipping tests
+#### Explain skipping tests
 
 ```js
 describe.skip("…", () => { // Disabled due to flakiness // TODO: Solve it and un-skip
@@ -316,7 +318,7 @@ describe.skip("…", () => { // Disabled due to flakiness // TODO: Solve it and 
 it.skip("…", () => { // Feature is temporarily disabled, un-skip when enabled
 ```
 
-##### Prefer plain functions over Cypress commands
+#### Prefer plain functions over Cypress commands
 
 Prefer simple Javascript functions over Cypress commands.
 
@@ -373,7 +375,7 @@ describe("MMB: Check-in", () => {
 * [Highlight errors](http://take.ms/XQ5YN)
 * ...many others
 
-##### Don’t overcomplicate things with unnecessary levels of abstractions
+#### Don’t overcomplicate things with unnecessary levels of abstractions
 
 ```js
 // Bad
@@ -382,21 +384,21 @@ Cypress.Commands.add("mmbIsAccountBookingListVisible", () => {
 })
 ```
 
-##### Readability > Prettier
+#### Readability > Prettier
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_7F57A7A8D35FC5303BAC42EE7925F708AE045380DF4F28A8656DA8AF91080EA4_1539245406229_image.png)
 
-##### Use `within` when appropriate
+#### Use `within` when appropriate
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_7F57A7A8D35FC5303BAC42EE7925F708AE045380DF4F28A8656DA8AF91080EA4_1539256387889_image.png)
 
-#### Unsorted (yet)
+## Unsorted (yet)
 
-##### Simplify via afterEach
+#### Simplify via afterEach
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_77ECE64E7E3CF5A437BDA620719F63E668BE8780F72118332B3499A67B8F19BB_1540207373888_image.png)
 
-##### `should("exist")` is implicit after `get` or `find`
+#### `should("exist")` is implicit after `get` or `find`
 
 ```js
 cy.get(".navbar .logo").should("exist")
@@ -406,7 +408,7 @@ cy.get(".navbar .logo")
 cy.get(".navbar").find(".logo")
 ```
 
-##### Use `{ }` when using arrow functions for tests
+#### Use `{ }` when using arrow functions for tests
 
 ([Slack announcement](https://skypicker.slack.com/archives/C050XFGMN/p1542196373169200))
 **Reasoning**
