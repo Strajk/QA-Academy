@@ -70,7 +70,7 @@ cy.get("[data-tkey='booking.global.agreement.text_new2']").check() // 😐
 cy.get(".ReservationAgreement checkbox").check() // 🙏
 ```
 
-##### Comment unclear selectors
+##### Explain unclear selectors
 
 ```js
 // Suboptimal
@@ -88,19 +88,17 @@ cy.get(".BookingPassengerEditSummaryInfo .BookingPassengerEditSummaryInfo-wrap-s
 cy.get(".BookingPassengerEditSummaryInfo-wrap-single._original")
 ```
 
-Classical CSS
 
-```jade
-.Hotels
-  .Ad
-    .Title
-      .Actions
+###### Classical CSS
+
+```css
+.Hotels .Ad .Title .Actions {}
 ```
 
-BEM
+###### BEM
 
-```jade
-.Hotels-Ad-Title-actions
+```css
+.Hotels-Ad-Title-Actions {}
 ```
 
 ##### Avoid unnecessary `find`s
@@ -123,6 +121,29 @@ cy.get("[src='/images/flags/spFlag-cz.png']")
 // ===>
 cy.get("[src$='cz.png']")
 ```
+
+##### Keep selectors consistent
+
+###### Given
+```html
+<div class="PaymentFormCard">
+  <input
+    type="text"
+    name="payment.card.number"
+    autocomplete="cc-number"
+    data-test="payment-cc-number-input"
+  />
+  <!-- … more inputs -->
+</div>
+```
+
+```js
+cy.get(".PaymentFormCard [autocomplete='cc-number']").type("...")
+cy.get("input[name='payment.card.number']").type("...")
+cy.get("[data-test='payment-cc-number-input']").type("...")
+```
+
+All are valid and acceptable selectors, but for clarify, choose one and stick to it.
 
 ##### Prefer using values over text content for translation independent tests
 
@@ -225,7 +246,7 @@ describe("Payment", () => {
     cy.get().click()
   })
 })
-
+```
 
 ##### Prefer skipping to commenting
 
@@ -249,7 +270,7 @@ it("Something", () => {
 
 #### Clarity
 
-##### Comment non-obvious
+##### Explain non-obvious
 
 ```js
 // Suboptimal
@@ -271,7 +292,7 @@ cy.get("button").click().click()
 cy.get("button").click().click() // Add two items
 ```
 
-##### Comment non-standard
+##### Explain non-standard
 
 ```js
 // TODO: Explain
