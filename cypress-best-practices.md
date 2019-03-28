@@ -98,6 +98,8 @@ This generated class as a whole will still change often (even every release), an
 
 But the beginning of the class `Button_` will **stay the same and can be used.**
 
+Playground for Styled components: <https://jsbin.com/mizijaz/edit?html,output>
+
 </details>
 
 ```js
