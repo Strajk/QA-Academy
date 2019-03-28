@@ -281,10 +281,18 @@ Cypress.on(
 )
 ```
 
-##### Comment force usage
+##### Explain force usage
 
 ```js
 cy.get("[name='cardExpirationYear']").type("20", { force: true }) // it's weirdly covered by ...
+```
+
+##### Explain skipping tests
+
+```js
+describe.skip("…", () => { // Disabled due to flakiness // TODO: Solve it and un-skip
+
+it.skip("…", () => { // Feature is temporarily disabled, un-skip when enabled
 ```
 
 ##### Prefer plain functions over Cypress commands
