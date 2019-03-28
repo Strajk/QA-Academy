@@ -54,8 +54,7 @@ cy.get("element load").click()
 * **TODO**: Selecting dynamic classes (invalid, touched, ...)
 
 #### Don't rely on generated attributes
-
-Nowadays, lot of websites uses 
+ 
 
 ```js
 // Bad
