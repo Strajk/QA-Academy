@@ -2,7 +2,12 @@
 
 ## General
 
-Ask yourself: Will I understand this after a month?
+* Ask yourself: Will I understand this after a month?
+
+#### Use Spellchecker
+
+![](https://api.monosnap.com/rpc/file/download?id=9t7AFQnmp7rpVu5IBg97IF4dUbdRbs)
+
 
 ## Cookies
 
