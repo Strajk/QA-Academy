@@ -200,6 +200,20 @@ cy.get("[data-test='payment-cc-number-input']").type("...")
 
 All are valid and acceptable selectors, but for clarify, choose one and stick to it.
 
+---
+
+Another example
+
+```js
+// Suboptimal
+cy.get("[type=email]").type("test@example.com")
+cy.get("[name='contact.phone']").type("123456789")
+
+// Good
+cy.get("[name='contact.email']").type("test@example.com")
+cy.get("[name='contact.phone']").type("123456789")
+```
+
 #### Prefer using values over text content for translation independent tests
 
 ```html
@@ -261,18 +275,6 @@ describe("title", () => {
 #### Strive for both extensiveness and brevity
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_7F57A7A8D35FC5303BAC42EE7925F708AE045380DF4F28A8656DA8AF91080EA4_1539180263216_image.png)
-
-#### Be consistent when possible
-
-```js
-// Suboptimal
-cy.get("[type=email]").type("test@example.com")
-cy.get("[name='contact.phone']").type("123456789")
-
-// Good
-cy.get("[name='contact.email']").type("test@example.com")
-cy.get("[name='contact.phone']").type("123456789")
-```
 
 #### Use hierarchical structure for tests
 
@@ -337,6 +339,16 @@ cy.get("button").contains("Continue").click()
 cy.get("button").contains("Continue").click() // Continue to "Shipping"
 cy.get("button").contains("Continue").click() // Continue to "Overview"
 cy.get("button").contains("Continue").click() // Continue to "Payment"
+
+// Perfect - will be shown also in Cypress UI
+cy.log("Continue to 'Shipping'")
+cy.get("button").contains("Continue").click()
+
+cy.log("Continue to 'Overview'")
+cy.get("button").contains("Continue").click()
+
+cy.log("Continue to 'Payment'")
+cy.get("button").contains("Continue").click()
 ```
 
 ```js
