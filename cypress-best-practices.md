@@ -109,13 +109,29 @@ Playground for Styled components: <https://jsbin.com/mizijaz/edit?html,output>
 
 ```js
 // Bad
-cy.get("[class='PaymentButton__Container-sc-1qu37au-0 ewtsmp']").click()
+cy.get("[class='BookingSeat__Container-sc-1qu37au-0 ewtsmp']").click()
 
 // Good
-cy.get("[class^='PaymentButton_']").click() // ^= means "starts with"
+cy.get("[class^='BookingSeat_']").click() // ^= means "starts with"
 ```
 
-Beware that it's not possible to use "starts with" operator `^=` with shorter dot syntax `.` for selecting classes.
+**⚠️ Beware:** Trailing `_` is very important
+
+
+###### Given 
+
+```html
+<div class="BookingSeating__Container-xyz123">
+  <div class="BookingSeat__Container-xyz123"></div>
+</div>
+```
+
+```js
+cy.get("[class^='BookingSeat']") // 🔴 This will select BookingSeating
+cy.get("[class^='BookingSeat_']") // ✅ This will select BookingSeat
+```
+
+**⚠️ Beware:** It's not possible to use "starts with" operator `^=` with shorter dot syntax `.` for selecting classes.
 
 ```js
 // This will not work!!!
