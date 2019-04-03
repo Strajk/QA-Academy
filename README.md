@@ -1,6 +1,6 @@
 # Kiwi.com QA Academy 🎓
 
-<i class="fab fa-github"></i> https://github.com/Strajk/QA-Academy>
+<i class="fab fa-github"></i> <https://github.com/Strajk/QA-Academy>
 
 <b-alert show variant="warning" style="padding-left: 60px">
   <big style="font-size: 250%; position: absolute; left: 10px; top: 50%; transform: translateY(-50%);">👷‍♂️</big>
