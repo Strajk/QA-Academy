@@ -157,6 +157,26 @@ cy.fixture("image.jpg").then(file => {
 
 ## Other Tips
 
+### Hover
+
+// TODO: Double check if correct
+
+```js
+Cypress.Commands.add("triggerHover", elements => {
+  function fireEvent(element, event) {
+    if (element.fireEvent) {
+      element.fireEvent(`on${event}`)
+    } else {
+      const evObj = document.createEvent("Events")
+      evObj.initEvent(event, true, false)
+      element.dispatchEvent(evObj)
+    }
+  }
+
+  elements.each((index, element) => { fireEvent(element, "mouseover") })
+})
+```
+
 ### Searching for existing tests
 
 Sadly, right now there’s no better way than full-text search
