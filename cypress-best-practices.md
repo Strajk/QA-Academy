@@ -348,6 +348,40 @@ it("Something", () => {
 
 ## Clarity
 
+#### Focus on the feature under test
+
+In order to keep tests clean and succinct, focus on the feature under the test
+and prepare your environment is such a way it doesn't interfere much with outside world.
+ 
+
+```js
+describe("Auth", () => {
+  before(() => {
+    cy.setCookie("cookie_consent", "agreed")
+    cy.setCookie("newsletter_prompt", "hide")
+    cy.setCookie("native_app_banner", "hide")
+    cy.visit("…")
+  })
+  it("Signup", () => { /* ... */ })
+  it("Login with credentials", () => { /* ... */ })
+  it("Login with Facebook", () => { /* ... */ })
+  it("Login with Google", () => { /* ... */ })
+  it("Forget password", () => { /* ... */ })
+  // ...
+})
+```
+
+If integration with other features is important, cover it separately.
+
+```js
+describe("Auth: integration with other components", () => {
+  it("Integration with Cookie consent", () => { /* ... */ })
+  it("Integration with Sidebar", () => { /* ... */ })
+  it("Integration with Native app banner", () => { /* ... */ })
+  // ...
+})
+```
+
 #### Explain non-obvious
 
 ```js
@@ -465,10 +499,21 @@ describe("MMB: Check-in", () => {
 
 ```js
 // Bad
-Cypress.Commands.add("mmbIsAccountBookingListVisible", () => {
+function mmbIsAccountBookingListVisible() {
   cy.get(".AccountBookingList")
 })
 ```
+
+```js
+// Bad
+Cypress.Commands.add("haveLength", (elements, length) => {
+  expect(elements.length).to.equal(length)
+})
+cy.get("something").haveLength(3)
+
+// Good
+cy.get("something").should("have.length", 3)
+````
 
 #### Readability > Prettier
 
