@@ -73,6 +73,7 @@ It's not compatible with Cypress by default, but it's compatible with Mocha – 
 
 <details>
 <summary>Screenshot of configuration</summary>
+
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_77ECE64E7E3CF5A437BDA620719F63E668BE8780F72118332B3499A67B8F19BB_1539337924527_image.png)
 </details>
 
