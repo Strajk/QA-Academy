@@ -48,6 +48,8 @@ win.localStorage.debug = "cypress:*"
 
 ### Edit `baseUrl` in `cypress.json` to run Cypress on different "base url"
 
+// TODO: Make more important and notice-able
+
 ```text
 Change from
 `baseUrl: "http://localhost:8000"`
@@ -57,11 +59,22 @@ to ie.
 
 ### View tests in Webstorm
 
-![Configuration](https://d2mxuefqeaa7sj.cloudfront.net/s_77ECE64E7E3CF5A437BDA620719F63E668BE8780F72118332B3499A67B8F19BB_1539337924527_image.png)
+WebStorm has very useful **Test overview window**.
 
-![](https://d2mxuefqeaa7sj.cloudfront.net/s_77ECE64E7E3CF5A437BDA620719F63E668BE8780F72118332B3499A67B8F19BB_1539337962809_image.png)
+It's not compatible with Cypress by default, but it's compatible with Mocha – which Cypress uses under the hood. In order to make it work with Cypress, we need to create new **Run/Debug Configuration**.
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_77ECE64E7E3CF5A437BDA620719F63E668BE8780F72118332B3499A67B8F19BB_1539341572272_ScreenFlow.gif)
+
+
+* Create new **Run/Debug Configuration** from Mocha preset
+* Into `Extra Mocha options`, put `--require @babel/register --require "cypress/cypress-mocha-mock.js" `
+* Into `Test directory`, put `PATH_TO_YOUR_PROJECT/cypress/integration`
+* Check `Include subdirectories`
+
+<details>
+<summary>Screenshot of configuration</summary>
+![](https://d2mxuefqeaa7sj.cloudfront.net/s_77ECE64E7E3CF5A437BDA620719F63E668BE8780F72118332B3499A67B8F19BB_1539337924527_image.png)
+</details>
 
 
 ### Checking dimensions
