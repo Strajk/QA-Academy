@@ -63,19 +63,20 @@ WebStorm has very useful **Test overview window**.
 
 It's not compatible with Cypress by default, but it's compatible with Mocha – which Cypress uses under the hood. In order to make it work with Cypress, we need to create new **Run/Debug Configuration**.
 
-![](https://d2mxuefqeaa7sj.cloudfront.net/s_77ECE64E7E3CF5A437BDA620719F63E668BE8780F72118332B3499A67B8F19BB_1539341572272_ScreenFlow.gif)
-
-
-* Create new **Run/Debug Configuration** from Mocha preset
-* Into `Extra Mocha options`, put `--require @babel/register --require "cypress/cypress-mocha-mock.js" `
-* Into `Test directory`, put `PATH_TO_YOUR_PROJECT/cypress/integration`
+* Search for action `Edit configurations...` and "open it"
+* Click on the `+` icon in the top-left (or press `cmd+n`)
+* Select Mocha
+* In `Name` field, type `Cypress`
+* In `Extra Mocha options`, put `--require @babel/register --require "cypress/cypress-mocha-mock.js" `
+* In `Test directory`, click on the directory icon in the right side of the text input
+* Navigate to the directory with frontend, navigate into `cypress`, navigate into `integration`, select Open
+* Check that in `Test directory` is something like `PATH_TO_THE_PROJECT/cypress/integration`
 * Check `Include subdirectories`
+* Click on OK
+* "Cypress" should appear in the top-right corner of WebStorm window
+* Click on the play button next to it
 
-<details>
-<summary>Screenshot of configuration</summary>
-
-![](https://d2mxuefqeaa7sj.cloudfront.net/s_77ECE64E7E3CF5A437BDA620719F63E668BE8780F72118332B3499A67B8F19BB_1539337924527_image.png)
-</details>
+<video src="./assets/webstorm-cypress-tests.mp4" width="100%" controls="controls"></video>
 
 
 ### Checking dimensions
