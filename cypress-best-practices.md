@@ -535,6 +535,17 @@ cy.get("input[type='checkbox'][required]").each($el => { // T&C, GDPR and Adult 
 cy.get("input[type='checkbox'][required]").click({ multiple: true }) // T&C, GDPR and Adult checkboxes
 ``` 
 
+#### Assert on multiple elements instead of iterating over them  
+```js
+// Sub-optimal
+cy.get("input").each($el => {
+  cy.wrap($el).should("have.class", "_disabled")
+})
+
+// Better, simpler
+cy.get("input").should("have.class", "_disabled")
+``` 
+
 ## Unsorted (yet)
 
 #### Simplify via afterEach
