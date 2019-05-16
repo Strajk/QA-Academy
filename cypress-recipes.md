@@ -2,7 +2,7 @@
 
 ### Project initialization
 
-<video src="/./assets/cypress/initialize.mp4" width="100%" controls="controls"></video>
+<video src="./assets/cypress/initialize.mp4" width="100%" controls="controls"></video>
 
 ### Configuration
 
