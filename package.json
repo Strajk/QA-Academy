@@ -4,7 +4,10 @@
   "scripts": {
     "start": "docsify serve .",
     "lint": "eslint '**/*.{js,md}'",
-    "lint:fix": "eslint '**/*.js' --fix"
+    "lint:fix": "eslint '**/*.js' --fix",
+    "cypress:open": "cypress open",
+
+    "demo:cypress:open": "cypress open --project ./assets/demo"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,7 @@
   "homepage": "https://github.com/Strajk/qa-academy#readme",
   "dependencies": {},
   "devDependencies": {
+    "cypress": "3.3.1",
     "eslint": "5.16.0",
     "eslint-plugin-markdown": "1.0.0",
     "markdownlint": "0.14.2",
