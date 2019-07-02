@@ -38,13 +38,29 @@ Cypress.on("fail", (err, runnable) => {
 })
 ```
 
-### VERY verbose Cypress logs in DevTools
+### Verbose Cypress logs
+
+#### In DevTools when running Cypress via `cypress open`
 
 In file: `cypress/support/index.js`
 
 ```js
 win.localStorage.debug = "cypress:*"
 ```
+
+#### In terminal/console when running Cypress in via `cypress run`
+
+```bash
+/node_modules/.bin/cypress run …
+=> 
+DEBUG=cypress:* /node_modules/.bin/cypress run …
+```
+
+In current Kiwi.com Frontend pipeline, this line is located in `gitlab-ci.yml`
+
+![](https://api.monosnap.com/file/download?id=fQ51xsIwnnKiuTmv5aItBOZxrlSu1E)
+
+
 
 ### Edit `baseUrl` in `cypress.json` to run Cypress on different "base url"
 
