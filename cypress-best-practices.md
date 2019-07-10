@@ -6,8 +6,23 @@
 
 #### Use Spellchecker
 
-![](https://api.monosnap.com/rpc/file/download?id=9t7AFQnmp7rpVu5IBg97IF4dUbdRbs)
+Although incorrect spelling is readable by humans,
+it makes searching/filtering hard for computers.
 
+##### Example
+```js
+it("Fliht transport is sucessfuly booked")
+it("Flight transport is successfully booked")
+```
+
+When searching for `successfull` or `flight`, first line will not be matched. 
+
+Spellchecking can be performed by:
+* WebStorm (and other JetBrains products): natively
+* VSCode: [Extension](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+* ESLint plugin
+
+**🥝 Kiwi.com**: We enforce correct spellchecking via ESLint. Disable editor spellcheckers to get consistent behaviour.
 
 ## Cookies
 
