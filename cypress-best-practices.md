@@ -469,6 +469,8 @@ Prefer simple Javascript functions over Cypress commands.
 
 ***otherwise, use simple javascript functions***
 
+Also see official Cypress recommendation: [Don’t make everything a custom command](https://docs.cypress.io/api/cypress-api/custom-commands.html#Best-Practices) 
+
 Bad
 
 ```js
