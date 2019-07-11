@@ -24,6 +24,10 @@ Spellchecking can be performed by:
 
 **🥝 Kiwi.com**: We enforce correct spellchecking via ESLint. Disable editor spellcheckers to get consistent behaviour.
 
+Another nice side-effect of this rule is that it forbids using generated classes as selectors,
+e.g. `.get(".TextLink__StyledTextLink-sc-1bvlje4-1")` will throw spell checking error
+and nudges you to rewrite it to e.g. `.get("[class^=TextLink_]")` 
+
 ## Cookies
 
 #### Cookies: Set them before `visit`
