@@ -607,3 +607,49 @@ it("some check", () => {
   cy.verySophisticatedCommand("Foo", "Whoo"))
 }
 ```
+
+
+#### Smart defaults
+
+##### Hide ubiquitous, insignificant elements by default
+
+Examples: Cookie consent banner, chat, newsletter popup, promo modal, ... 
+
+Why?
+
+* Less complexity & noise while authoring and debugging tests
+* Less complexity & noise in reports (screenshots, videos) and visual testing
+
+Considered disadvantages:
+
+* Less confidence in tests, as mentioned elements could really break something. But this is negligible to all the benefits.  
+
+
+##### Example
+```js
+Cypress.Commands.overwrite("visit", (original, url, opts = {}) => {
+  cy.setCookie("cookie_consent", "agreed")
+  // …
+  original(url, opts)
+})
+```
+
+Side effect of this best practice is that it partially omits need to setting cookies in beforeEach blocks, which was common source of confusion and hard-to-debug bugs.  
+
+```js
+describe("…", () => {
+  beforeEach(() => {
+    cy.setCookie("cookie_consent", "agreed") // execution order: 2
+  })
+  
+  describe("…", () => {
+    before(() => {
+      cy.visit("…") // execution order: 1
+    })
+    
+    it("…", () => {
+      cy.get("…").should("…") // execution order: 3
+    })
+  })
+})
+```
