@@ -544,17 +544,30 @@ cy.get("something").should("have.length", 3)
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_7F57A7A8D35FC5303BAC42EE7925F708AE045380DF4F28A8656DA8AF91080EA4_1539256387889_image.png)
 
+#### Use invoke if possible to avoid accessing elements directly
+
+```js
+// Sub-optimal
+cy.get("input[name=firstName]")
+  .then($input => {
+    expect($input.val()).to.contain("Test")
+  })
+
+// Better
+cy.get("input[name=firstName]").invoke("val").should("contain", "Test")
+```
+
 #### Use `multiple: true` for clicking/checking on more elements
 
 ```js
 // Sub-optimal
 cy.get("input[type='checkbox'][required]").each($el => { // T&C, GDPR and Adult checkboxes
   $el.click()
-})
+  })
 
 // Better
 cy.get("input[type='checkbox'][required]").click({ multiple: true }) // T&C, GDPR and Adult checkboxes
-``` 
+```
 
 #### Assert on multiple elements instead of iterating over them  
 ```js
