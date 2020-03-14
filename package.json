@@ -23,7 +23,7 @@
     "cypress": "3.3.1",
     "docsify-cli": "4.3.0",
     "eslint": "5.16.0",
-    "eslint-plugin-markdown": "1.0.0",
+    "eslint-plugin-markdown": "1.0.2",
     "markdownlint": "0.14.2",
     "markdownlint-cli": "0.16.0"
   }
