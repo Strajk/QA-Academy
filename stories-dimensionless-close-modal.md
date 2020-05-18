@@ -2,7 +2,7 @@
 
 Modal close buttons on Kiwi.com are styled **little bit hacky**.
 
-Modal button element itself is dimensionless (that means, is 0x0 px).   
+Modal button element itself is dimensionless (that means, is 0x0 px).
 What actually has dimensions (and the cross icon) is it's [pseudo-element `:before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before)
 
 ![](./assets/stories/dimensionless-close-modal/close.png)

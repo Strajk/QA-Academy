@@ -10,14 +10,16 @@ Although incorrect spelling is readable by humans,
 it makes searching/filtering hard for computers.
 
 ##### Example
+
 ```js
 it("Fliht transport is sucessfuly booked")
 it("Flight transport is successfully booked")
 ```
 
-When searching for `successfull` or `flight`, first line will not be matched. 
+When searching for `successful` or `flight`, first line will not be matched.
 
 Spellchecking can be performed by:
+
 * WebStorm (and other JetBrains products): natively
 * VSCode: [Extension](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 * ESLint plugin
@@ -26,7 +28,7 @@ Spellchecking can be performed by:
 
 Another nice side-effect of this rule is that it forbids using generated classes as selectors,
 e.g. `.get(".TextLink__StyledTextLink-sc-1bvlje4-1")` will throw spell checking error
-and nudges you to rewrite it to e.g. `.get("[class^=TextLink_]")` 
+and nudges you to rewrite it to e.g. `.get("[class^=TextLink_]")`
 
 ## Cookies
 
@@ -79,13 +81,13 @@ cy.get("element load").click()
 
 #### Don't rely on generated classes
 
-<details> 
+<details>
 
 <summary>What are these weird "sc-bdVaJa cXeDc" classes?</summary>
 
 Nowadays, it's common to generate CSS instead of manually writing it.
 
-One of the most popular examples of this technique is [Styled components](styled-components.com) (Used at Kiwi.com)
+One of the most popular examples of this technique is [Styled components](https://styled-components.com/) (Used at Kiwi.com)
 
 ###### Developer writes
 
@@ -136,8 +138,7 @@ cy.get("[class^='BookingSeat_']").click() // ^= means "starts with"
 
 **⚠️ Beware:** Trailing `_` is very important
 
-
-###### Given 
+###### Given
 
 ```html
 <div class="BookingSeating__Container-xyz123">
@@ -156,7 +157,6 @@ cy.get("[class^='BookingSeat_']") // ✅ This will select BookingSeat
 // This will not work!!!
 cy.get(".^PaymentButton_']").click()
 ```
-
 
 #### Strive for descriptive selectors
 
@@ -182,7 +182,6 @@ cy.get(".BookingPassengerEditSummaryInfo .BookingPassengerEditSummaryInfo-wrap-s
 // ==>
 cy.get(".BookingPassengerEditSummaryInfo-wrap-single._original")
 ```
-
 
 ###### Classical CSS
 
@@ -220,6 +219,7 @@ cy.get("[src$='cz.png']")
 #### Keep selectors consistent
 
 ###### Given
+
 ```html
 <div class="PaymentFormCard">
   <input
@@ -371,7 +371,6 @@ it("Something", () => {
 
 In order to keep tests clean and succinct, focus on the feature under the test
 and prepare your environment is such a way it doesn't interfere much with outside world.
- 
 
 ```js
 describe("Auth", () => {
@@ -439,7 +438,7 @@ cy.get("button").click().click() // Add two items
 // TODO: Explain
 Cypress.on(
   "uncaught:exception",
-  err => err.message.indexOf("Cannot set property 'aborted' of undefined") === -1,
+  err => err.message.indexOf("Cannot set property 'aborted' of undefined") === -1
 )
 ```
 
@@ -452,9 +451,9 @@ cy.get("[name='cardExpirationYear']").type("20", { force: true }) // it's weirdl
 #### Explain skipping tests
 
 ```js
-describe.skip("…", () => { // Disabled due to flakiness // TODO: Solve it and un-skip
+describe.skip("…", () => {}) // Disabled due to flakiness // TODO: Solve it and un-skip
 
-it.skip("…", () => { // Feature is temporarily disabled, un-skip when enabled
+it.skip("…", () => {}) // Feature is temporarily disabled, un-skip when enabled
 ```
 
 #### Prefer plain functions over Cypress commands
@@ -469,7 +468,7 @@ Prefer simple Javascript functions over Cypress commands.
 
 ***otherwise, use simple javascript functions***
 
-Also see official Cypress recommendation: [Don’t make everything a custom command](https://docs.cypress.io/api/cypress-api/custom-commands.html#Best-Practices) 
+Also see official Cypress recommendation: [Don’t make everything a custom command](https://docs.cypress.io/api/cypress-api/custom-commands.html#Best-Practices)
 
 Bad
 
@@ -487,6 +486,7 @@ describe("MMB: Check-in", () => {
   before(() => {
     cy.mmbLoad("default:default")
   })
+})
 ```
 
 Good
@@ -506,6 +506,7 @@ describe("MMB: Check-in", () => {
   before(() => {
     mmbCommands.load("default:default")
   })
+})
 ```
 
 **Why?** Awesome support in IDE and static analysis!
@@ -522,7 +523,7 @@ describe("MMB: Check-in", () => {
 // Bad
 function mmbIsAccountBookingListVisible() {
   cy.get(".AccountBookingList")
-})
+}
 ```
 
 ```js
@@ -563,13 +564,14 @@ cy.get("input[name=firstName]").invoke("val").should("contain", "Test")
 // Sub-optimal
 cy.get("input[type='checkbox'][required]").each($el => { // T&C, GDPR and Adult checkboxes
   $el.click()
-  })
+})
 
 // Better
 cy.get("input[type='checkbox'][required]").click({ multiple: true }) // T&C, GDPR and Adult checkboxes
 ```
 
 #### Assert on multiple elements instead of iterating over them  
+
 ```js
 // Sub-optimal
 cy.get("input").each($el => {
@@ -578,7 +580,7 @@ cy.get("input").each($el => {
 
 // Better, simpler
 cy.get("input").should("have.class", "_disabled")
-``` 
+```
 
 ## Unsorted (yet)
 
@@ -617,16 +619,15 @@ it("some check", () =>
 
 // Good citizen
 it("some check", () => {
-  cy.verySophisticatedCommand("Foo", "Whoo"))
-}
+  cy.verySophisticatedCommand("Foo", "Whoo")
+})
 ```
-
 
 #### Smart defaults
 
 ##### Hide ubiquitous, insignificant elements by default
 
-Examples: Cookie consent banner, chat, newsletter popup, promo modal, ... 
+Examples: Cookie consent banner, chat, newsletter popup, promo modal, ...
 
 Why?
 
@@ -637,8 +638,8 @@ Considered disadvantages:
 
 * Less confidence in tests, as mentioned elements could really break something. But this is negligible to all the benefits.  
 
-
 ##### Example
+
 ```js
 Cypress.Commands.overwrite("visit", (original, url, opts = {}) => {
   cy.setCookie("cookie_consent", "agreed")
@@ -659,7 +660,7 @@ describe("…", () => {
     before(() => {
       cy.visit("…") // execution order: 1
     })
-    
+
     it("…", () => {
       cy.get("…").should("…") // execution order: 3
     })

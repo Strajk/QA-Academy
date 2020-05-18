@@ -6,7 +6,7 @@
 1. `.blue` → everything with (attribute) class `blue`
 1. `.blue.big` → everything with (attribute) class `blue` and `big`
 1. `button.primary` → `button`s with (attribute) class `primary`
-1. `.sidebar button` → inside `.sidebar`, `button`s 
+1. `.sidebar button` → inside `.sidebar`, `button`s
 1. `input[type=text]` → `input`s with attribute `type` of value `text`
 1. `input[type=text]:first` → above, but just first
 1. `input[type=text]:eq(0)` → same as above

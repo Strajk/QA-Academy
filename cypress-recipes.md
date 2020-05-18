@@ -52,15 +52,13 @@ win.localStorage.debug = "cypress:*"
 
 ```bash
 /node_modules/.bin/cypress run …
-=> 
+=>
 DEBUG=cypress:* /node_modules/.bin/cypress run …
 ```
 
 In current Kiwi.com Frontend pipeline, this line is located in `gitlab-ci.yml`
 
 ![](https://api.monosnap.com/file/download?id=fQ51xsIwnnKiuTmv5aItBOZxrlSu1E)
-
-
 
 ### Edit `baseUrl` in `cypress.json` to run Cypress on different "base url"
 
@@ -83,7 +81,7 @@ It's not compatible with Cypress by default, but it's compatible with Mocha – 
 * Click on the `+` icon in the top-left (or press `cmd+n`)
 * Select Mocha
 * In `Name` field, type `Cypress`
-* In `Extra Mocha options`, put `--require @babel/register --require "cypress/cypress-mocha-mock.js" `
+* In `Extra Mocha options`, put `--require @babel/register --require "cypress/cypress-mocha-mock.js"`
 * In `Test directory`, click on the directory icon in the right side of the text input
 * Navigate to the directory with frontend, navigate into `cypress`, navigate into `integration`, select Open
 * Check that in `Test directory` is something like `PATH_TO_THE_PROJECT/cypress/integration`
@@ -93,7 +91,6 @@ It's not compatible with Cypress by default, but it's compatible with Mocha – 
 * Click on the play button next to it
 
 <video src="./assets/webstorm-cypress-tests.mp4" width="100%" controls="controls"></video>
-
 
 ### Checking dimensions
 
@@ -130,7 +127,7 @@ Cypress.Commands.add("logout", () => {
 
 ### Wait until loader is gone
 
-```
+```js
 cy.visit("")
 cy.get(".Loader").should("not.exist", { timeout: 15 * 1000 })
 ```
@@ -144,6 +141,10 @@ describe("Loops", () => {
       it("…", () => {
         cy.visit(`/?currency=${config.currency}`)
         // …
+      })
+    })
+  })
+})
 ```
 
 ### Window access
@@ -162,7 +163,7 @@ cy
 
 ```js
 cy.get("…").type("typing")
-cy.get("…").type("slow.typing", {delay: 100})
+cy.get("…").type("slow.typing", { delay: 100 })
 
 cy
   .get("…")

@@ -7,7 +7,6 @@
   <b>Constantly improved and revised!</b><br>Both structure and content will be changing drastically.
 </b-alert>
 
-
 | #  | Topic                                       | Format  | Prerequisites                |
 |----|---------------------------------------------|---------|------------------------------|
 | 1  | Git                                         | Lecture | git, Webstorm                |
@@ -39,4 +38,3 @@
 * Vasek
 * Honza
 * Mayyas
-

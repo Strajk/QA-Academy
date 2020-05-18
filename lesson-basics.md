@@ -19,6 +19,7 @@
 <video src="./assets/webstorm/folding.mp4" width="100%" controls="controls"></video>
 
 #### Split window
+
 <video src="./assets/webstorm/split.mp4" width="100%" controls="controls"></video>
 
 ## Markdown

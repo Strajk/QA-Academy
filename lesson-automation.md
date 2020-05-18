@@ -51,5 +51,3 @@ Write Cypress tests for <https://www.kiwi.com>
 * <https://docs.cypress.io/api/api/table-of-contents.html>
 * <https://github.com/cypress-io>
 * <https://github.com/cypress-io/cypress/issues>
-
-

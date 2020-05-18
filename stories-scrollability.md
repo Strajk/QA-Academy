@@ -25,9 +25,9 @@ it("Foo should not be scrollable", (done) => {
 #### Solution B: Comparing element dimension attributes
 
 Elements have
-[`clientWidth`](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth) and 
+[`clientWidth`](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth) and
 [`scrollWidth`](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollWidth) properties.
-When both are equal, it should mean that element has no reason be scrollable. 
+When both are equal, it should mean that element has no reason be scrollable.
 
 ```js
 it("Foo should not be scrollable", () => {
@@ -51,12 +51,10 @@ it("Foo should not be scrollable", () => {
 })
 ```
 
-#### Solution C, D, E, ...
+#### Solution C, D, E
 
 Cypress is just JavaScript, there's infinite amount of solutions. Propose yours!
 
 ---
 
 **Solutions can be examined and run [here](https://github.com/Strajk/QA-Academy/tree/master/assets/stories/scrollability)**
-
-

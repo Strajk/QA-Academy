@@ -1,6 +1,7 @@
 # Cheatsheets: Cypress Reference
 
 ### Navigating
+
 * ️[**setCookie**](https://docs.cypress.io/api/commands/setcookie.html)
   * `cy.setCookie("cookie_consent", "agreed")`
 * [**visit**](https://docs.cypress.io/api/commands/visit.html)
@@ -12,17 +13,19 @@
   * `cy.reload()`
 
 ### Selecting
-* ️[**get**](https://docs.cypress.io/api/commands/get.html) 
+
+* ️[**get**](https://docs.cypress.io/api/commands/get.html)
   * `cy.get("h1.title")` / `cy.get("[data-test='uniqueSelectorJustForTests']")`
-  * `cy.get("#todos").as("todos") …then… cy.get("@todos")` 
+  * `cy.get("#todos").as("todos") …then… cy.get("@todos")`
 * [**️contains**](https://docs.cypress.io/api/commands/contains.html)
   * `cy.contains("Register")`
   * `cy.get("button").contains("Submit")`
 * [focused](https://docs.cypress.io/api/commands/focused.html)
-  * `cy.focused()` 
+  * `cy.focused()`
 
 ### Asserting/Expecting
-* [**should**](https://docs.cypress.io/api/commands/should.html) 
+
+* [**should**](https://docs.cypress.io/api/commands/should.html)
   * `cy.get(…).should("have.class", "active")`
   * `cy.get(…).should("have.length", 5)`
   * `cy.get(…).should("be.disabled")`
@@ -32,6 +35,7 @@
 ➡️ [**List of Assertions**](https://docs.cypress.io/guides/references/assertions.html#BDD-Assertions) ⬅️
 
 ### Interaction
+
 * [**click**](https://docs.cypress.io/api/commands/click.html) & [dblclick](https://docs.cypress.io/api/commands/dblclick.html)
   * `cy.get(»selector«).click()`
   * `cy.get(»selector matching multiple elements«).click({ multiple: true })` – use with caution!
@@ -53,6 +57,7 @@
   * 🐨 some people prefer clicking on submit button / pressing "Enter" instead
 
 ### Viewport
+
 * [**viewport**](https://docs.cypress.io/api/commands/viewport.html)
   * `cy.viewport(1280, 1024)`
   * `cy.viewport("macbook-15")`
@@ -64,20 +69,21 @@
   * `cy.get(»sidebar«).scrollTo("bottom")`
 
 ### Utils
+
 * [**wait**](https://docs.cypress.io/api/commands/wait.html) – milliseconds!
   * `cy.wait(5000)` – use only when necessarily
 * [screenshot](https://docs.cypress.io/api/commands/screenshot.html)
   * `cy.screenshot()` – automatic filename from test filename and test suite structure
   * `cy.screenshot(»filename«)`
 
-
-
 ### Debugging 🛠
+
 * [**log**](https://docs.cypress.io/api/commands/log.html)
   * `cy.log("Message for humans")`
 * [debug](https://docs.cypress.io/api/commands/debug.html) & [pause](https://docs.cypress.io/api/commands/pause.html)
 
 ### Interaction programmatically 🤖 `TODO: Later`
+
 * [invoke](https://docs.cypress.io/api/commands/invoke.html) - function
 * [its](https://docs.cypress.io/api/commands/its.html) - property
 * [then](https://docs.cypress.io/api/commands/then.html)
@@ -85,12 +91,14 @@
 * [each](https://docs.cypress.io/api/commands/each.html)
 
 ### Environment 🤖 `TODO: Later`
+
 * [location](https://docs.cypress.io/api/commands/location.html)
 * [hash](https://docs.cypress.io/api/commands/hash.html)
 * [title](https://docs.cypress.io/api/commands/title.html)
 * [url](https://docs.cypress.io/api/commands/url.html)
 
 ### Mocking 🌍 `TODO: Later`
+
 * [fixture](https://docs.cypress.io/api/commands/fixture.html)
 * [server](https://docs.cypress.io/api/commands/server.html)
 * [spy](https://docs.cypress.io/api/commands/spy.html)
@@ -111,10 +119,9 @@
 | `cy.get("»modal«").find(»close btn«)` | `cy.get("»modal« »close btn«")`   |
 | `cy.get("tr").filter(".odd")`         | `cy.get("tr.odd")`                |
 
-
 * [first](https://docs.cypress.io/api/commands/first.html) & [last](https://docs.cypress.io/api/commands/last.html) & [eq](https://docs.cypress.io/api/commands/eq.html)
 * [filter](https://docs.cypress.io/api/commands/filter.html)
-* [not](https://docs.cypress.io/api/commands/not.html) 
+* [not](https://docs.cypress.io/api/commands/not.html)
 * [find](https://docs.cypress.io/api/commands/find.html)
 * [closest](https://docs.cypress.io/api/commands/closest.html)
 * [parent](https://docs.cypress.io/api/commands/parent.html)
