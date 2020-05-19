@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "config:base",
+    ":preserveSemverRanges"
+  ],
+  "packageRules": [
+    {
+      "paths": ["package.json"] // Limit Renovate only to root project, not on examples in ./spaces/
+    }
+  ]
+}
