@@ -5,7 +5,9 @@
   ],
   "packageRules": [
     {
-      "paths": ["package.json"] // Limit Renovate only to root project, not on examples in ./spaces/
+      // Limit Renovate only to root project, not on examples in ./spaces/
+      // https://docs.renovatebot.com/configuration-options/#paths
+      "paths": ["+(package.json)"]
     }
   ]
 }
