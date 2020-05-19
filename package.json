@@ -22,7 +22,7 @@
   "homepage": "https://github.com/Strajk/qa-academy#readme",
   "dependencies": {},
   "devDependencies": {
-    "cypress": "~3.3.1",
+    "cypress": "~4.5.0",
     "docsify-cli": "~4.3.0",
     "eslint": "~7.0.0",
     "eslint-plugin-markdown": "~1.0.2",
