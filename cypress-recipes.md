@@ -132,7 +132,7 @@ cy.visit("")
 cy.get(".Loader").should("not.exist", { timeout: 15 * 1000 })
 ```
 
-### Loops
+### Loop scenarios
 
 ```js
 describe("Loops", () => {
@@ -237,4 +237,84 @@ Run only specific test
 ```text
  https://       www.kiwi.com  /us/content/manage/1234 ?something=true
 |- protocol -| |- hostname -| |- path              -| |- query --
+```
+
+### Snapshots
+
+```js
+let last = cy.createSnapshot('last') // » { name, htmlAttrs: {}, body: {} }
+let lastBody = last.body.get() // » [$body]
+Cypress.$autIframe.contents().find('body').remove()
+Cypress.$autIframe.contents().find('html').append(lastBody)
+```
+
+### Access AUT (Application Under Test)
+
+```js
+Cypress.$autIframe.contents().find('body')
+```
+
+### Verify logs
+
+```js
+before() => {
+  cy.visit('/', {
+    onBeforeLoad(win) {
+      cy.spy(win.console, 'log').as('log')
+  )
+
+  it('logs message on startup', () => {
+    cy.get('@log').should('have.been.calledOnceWithExactly', 'rendering app')
+  )
+```
+
+### Bake
+  
+```js
+// filter tests by title substring
+Cypress.grep('hello world')
+// run filtered tests 100 times
+Cypress.grep('hello world', null, 100)
+// filter tests by tag string
+// in this case will run tests with tag @smoke OR @fast
+Cypress.grep(null, '@smoke @fast')
+// run tests tagged @smoke AND @fast
+Cypress.grep(null, '@smoke+@fast')
+// run tests with title containing "hello" and tag @smoke
+Cypress.grep('hello', '@smoke')
+// run tests with title containing "hello" and tag @smoke 10 times
+Cypress.grep('hello', '@smoke', 10)
+```
+
+```shell
+CYPRESS_grep='#stable' CYPRESS_burn=5 npx cypress run
+```
+
+### Env
+
+Cypress.env() // 'CI', ...
+
+### Asserting on logic from selectors
+
+```js
+it.only('adds numbers via aliases', () => {
+  cy.visit('public/index.html')
+  cy.get('[name=a]').invoke('val').then(parseIt).as('a')
+  cy.get('[name=b]').invoke('val').then(parseIt).as('b')
+  cy.get('#result')
+    .invoke('text')
+    .then(parseInt)
+    .as('result')
+    .then (function () {
+      expect(this.a + this.b).to.eq(this.result)
+    })
+)
+```
+
+### Filtering tests
+
+https://github.com/cypress-io/cypress-skip-test
+
+```js
+if (isOn('windows') && isOn('localhost')) { /* ... */ }
 ```

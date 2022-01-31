@@ -667,3 +667,11 @@ describe("…", () => {
   })
 })
 ```
+
+#### Prefer `describe` over `context`
+
+> Cypress docs: context() is identical to describe() and specify() is identical to it(), so choose whatever terminology works best for you.
+
+> Mocha docs: context() is just an alias for describe(), and behaves the same way; it provides a way to keep tests easier to read and organized. Similarly, specify() is an alias for it().
+
+Although context and describe is identical, describe is more common in JavaScript ecosystem. 
