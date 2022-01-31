@@ -10,6 +10,7 @@
 * [Cypress: Reference](./cypress-reference.md)
 * [Cypress: Recipes](./cypress-recipes.md)
 * [Cypress: Best practices](./cypress-best-practices.md)
+* [Cypress: Meteor](./cypress-meteor.md)
 * &nbsp;
 * **Stories**
 * [Checking element scroll-ability](./stories-scrollability.md)
